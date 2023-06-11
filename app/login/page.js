@@ -10,7 +10,7 @@ const { Title } = Typography;
 
 export default function Login() {
     return (
-        <div className="flex items-center justify-center h-screen">
+        <div className="bg-[#a7bcff] flex items-center justify-center h-screen">
             <Card style={{ width: 300 }}>
                 <div className="flex items-center justify-center">
                     <Title level={2}>Chat App</Title>

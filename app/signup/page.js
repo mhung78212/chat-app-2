@@ -8,7 +8,7 @@ const { Title } = Typography;
 
 const Singup = () => {
     return (
-        <div className="flex items-center justify-center h-screen">
+        <div className="bg-[#a7bcff] flex items-center justify-center h-screen">
             <Card className="w-[300px]">
                 <div className="flex justify-center">
                     <Title level={2}>Chat App</Title>

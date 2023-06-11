@@ -15,4 +15,10 @@ body {
     .no-scrollbar::-webkit-scrollbar {
         display: none;
     }
+    .border-bottom{
+        border-bottom: 1px solid #e5e9f2;
+    }
+    .border-top{
+        border-top: 1px solid #e5e9f2;
+    }
 }
