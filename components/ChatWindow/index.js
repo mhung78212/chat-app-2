@@ -18,7 +18,7 @@ const ChatWindow = () => {
                             <h6 className="text-black text-base">
                                 Catherine Richardson
                             </h6>
-                            <small class="text-[#adb5bd] text-sm">Online</small>
+                            <small className="text-[#adb5bd] text-sm">Online</small>
                         </div>
                     </div>
                     <div className="flex space-x-4 text-xl text-[#adb5bd]">

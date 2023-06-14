@@ -20,7 +20,7 @@ const Message = () => {
                         B
                     </Avatar>
                 </div>
-                    <span class="mx-[0.3125rem]">9:12am</span>
+                    <span className="mx-[0.3125rem]">9:12am</span>
             </div>
         </div>
     );

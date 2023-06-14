@@ -5,10 +5,27 @@ import { BsFacebook, BsGoogle } from "react-icons/bs";
 import { BiUserCircle } from "react-icons/bi";
 import { AiOutlineLock } from "react-icons/ai";
 import Link from "next/link";
+import { UserAuth } from "@/context/AuthProvider";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 const { Title } = Typography;
 
 export default function Login() {
+    const { googleSignIn, user } = UserAuth();
+    const router = useRouter();
+    const handleGoogleSignIn = async () => {
+        try {
+            await googleSignIn();
+        } catch (error) {
+            console.log(error);
+        }
+    };
+    useEffect(() => {
+        if (user != null) {
+            router.push("/");
+        }
+    }, [user, router]);
     return (
         <div className="bg-[#a7bcff] flex items-center justify-center h-screen">
             <Card style={{ width: 300 }}>
@@ -53,7 +70,12 @@ export default function Login() {
                     <Form.Item>
                         <div className="flex items-center justify-between">
                             <Button icon={<BsFacebook />}>Facebook</Button>
-                            <Button icon={<BsGoogle />}>Google</Button>
+                            <Button
+                                icon={<BsGoogle />}
+                                onClick={handleGoogleSignIn}
+                            >
+                                Google
+                            </Button>
                         </div>
                     </Form.Item>
 
